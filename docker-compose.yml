@@ -1,0 +1,12 @@
+version: "3"
+services:
+  restbase:
+    image: restbase:latest
+    #build:
+    #  context: .
+    container_name: restbase
+    restart: unless-stopped
+    ports:
+      - 7231:7231
+    volumes:
+      - ./config.yaml:/usr/local/lib/restbase/config.yaml
